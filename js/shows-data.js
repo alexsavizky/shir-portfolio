@@ -2,6 +2,8 @@
 // ערכו את הרשימה הזו כדי להוסיף / להסיר / לעדכן תוכניות. כל תוכנית היא אובייקט אחד.
 //
 // audio:  שם קובץ בלבד, חייב להיות בתיקייה assets/audio/  (השאירו "" אם עדיין אין)
+// link:   קישור חיצוני להאזנה (ספוטיפיי, hearthis.at וכו'). אם יש גם audio וגם
+//         link, מוצג הנגן המקומי. אחרת, אם יש link, מוצג כפתור "האזינו".
 // cover:  שם קובץ בלבד, חייב להיות בתיקייה assets/images/ (השאירו "" לתמונה אוטומטית)
 // tags:   רשימת תגיות קצרה (ז'אנר/נושא), מוצגת ככפתורים על הכרטיס
 //
@@ -15,6 +17,7 @@ const SHOWS = [
     tags: ["מוזיקה", "חי"],
     description: "תוכנית שצוללת לעומק ומסעירה את פני השטח.",
     audio: "",
+    link: "https://hearthis.at/bgu-radio/set/halfaklooficecream/",
     cover: "ice.jpeg",
   },
   {
@@ -24,7 +27,8 @@ const SHOWS = [
     tags: ["כלכלי", "מגזין"],
     description: "מדריך כלכלי לסטודנטים ולצעירים בתחילת הדרך הפיננסית שלהם.",
     audio: "",
-    cover: "",
+    link: "https://open.spotify.com/show/6dcpHJWuDFZLlznmfqrUeC?si=e68c77bbf0cb428f",
+    cover: "expansive student.jpeg",
   },
   {
     title: "חלונות",
@@ -34,6 +38,7 @@ const SHOWS = [
     description:
       'הפודקאסט מביא את סיפורם של כותבי הספר "אינני באף מקום אחר", בעקבות אירועי השבעה באוקטובר.',
     audio: "",
+    link: "https://open.spotify.com/show/6NiVFJcEJEnosKEnAGCmre?si=903fcae3adfa48fc",
     cover: "windos.jpeg",
   },
   {
@@ -44,6 +49,7 @@ const SHOWS = [
     description:
       "סיפורם האישי של החללים, סיפורים קטנים שיגרתיים וביתיים שמנציחים אותם כפי שהיו.",
     audio: "",
-    cover: "",
+    link: "https://lp.vp4.me/1scg",
+    cover: "homeshoes.jpeg",
   },
 ];

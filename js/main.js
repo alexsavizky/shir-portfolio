@@ -36,6 +36,7 @@
   function buildCover(show) {
     if (show.cover) {
       const img = document.createElement("img");
+      img.className = "show-cover";
       img.src = `assets/images/${show.cover}`;
       img.alt = `עטיפת התוכנית ${show.title}`;
       img.loading = "lazy";
@@ -94,6 +95,14 @@
         });
       });
       body.appendChild(audio);
+    } else if (show.link) {
+      const listen = document.createElement("a");
+      listen.className = "btn btn-ghost show-listen-link";
+      listen.href = show.link;
+      listen.target = "_blank";
+      listen.rel = "noopener noreferrer";
+      listen.textContent = "האזינו לתוכנית";
+      body.appendChild(listen);
     } else {
       const soon = document.createElement("p");
       soon.className = "show-soon";

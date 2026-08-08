@@ -177,6 +177,7 @@ p { margin: 0 0 1em; color: var(--text-dim); }
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top;
   flex-shrink: 0;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
@@ -216,7 +217,12 @@ p { margin: 0 0 1em; color: var(--text-dim); }
   font-size: 1.6rem;
   letter-spacing: .05em;
 }
-.show-body img { aspect-ratio: 16/9; object-fit: cover; }
+.show-cover {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 
 .show-body { padding: 20px; display: flex; flex-direction: column; gap: 6px; }
 .show-body h3 { font-size: 1.15rem; }
@@ -237,6 +243,12 @@ p { margin: 0 0 1em; color: var(--text-dim); }
 .show-desc { font-size: .92rem; }
 
 .show-body audio { width: 100%; margin-top: 6px; }
+.show-listen-link {
+  align-self: flex-start;
+  margin-top: 8px;
+  font-size: .85rem;
+  padding: 9px 18px;
+}
 .show-soon {
   font-size: .82rem;
   font-style: italic;
