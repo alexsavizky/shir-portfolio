@@ -11,6 +11,17 @@
 
 const SHOWS = [
   {
+    title: "#התחלנו עם מאיה בצלאל עסיס וקותי סבג",
+    station: "כאן ג'",
+    duration: "",
+    tags: ["תרבות", "אקטואליה", "פנאי"],
+    description:
+      "בכל תוכנית ישוחחו מאיה וקותי עם האנשים הכי מסקרנים ומפתיעים שעל סדר היום, יקשיבו לסיפורים של המאזינים, יתנו הצצה לחייהם האישיים.",
+    audio: "",
+    link: "https://www.kan.org.il/content/kan/kan-gimel/p-765064/",
+    cover: "begin.jpeg",
+  },
+  {
     title: "חצי קילו גלידה",
     station: "רדיו BGU",
     duration: "",
