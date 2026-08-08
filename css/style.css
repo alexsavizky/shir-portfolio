@@ -10,7 +10,23 @@
   --accent-2: #ffb238;
   --radius: 14px;
   --wrap: 1080px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Arial Hebrew", Arial, Roboto, Helvetica, sans-serif;
+}
+
+/* Hebrew glyphs are denser than Latin ones — tight/wide tracking that looks
+   fine in English reads oddly in Hebrew, so neutralize it under RTL. */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .logo {
+  letter-spacing: normal;
+}
+[dir="rtl"] .eyebrow {
+  letter-spacing: .04em;
+}
+[dir="rtl"] .tag {
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -160,6 +176,8 @@ p { margin: 0 0 1em; color: var(--text-dim); }
   width: 160px;
   height: 160px;
   border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 @media (max-width: 560px) {

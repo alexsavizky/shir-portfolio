@@ -33,21 +33,11 @@
       .join("");
   }
 
-  function formatDate(iso) {
-    const d = new Date(iso);
-    if (isNaN(d)) return iso;
-    return d.toLocaleDateString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  }
-
   function buildCover(show) {
     if (show.cover) {
       const img = document.createElement("img");
       img.src = `assets/images/${show.cover}`;
-      img.alt = `${show.title} cover art`;
+      img.alt = `עטיפת התוכנית ${show.title}`;
       img.loading = "lazy";
       return img;
     }
@@ -85,9 +75,7 @@
 
     const meta = document.createElement("p");
     meta.className = "show-meta";
-    meta.textContent = [show.station, formatDate(show.date), show.duration]
-      .filter(Boolean)
-      .join(" · ");
+    meta.textContent = [show.station, show.duration].filter(Boolean).join(" · ");
     body.appendChild(meta);
 
     const desc = document.createElement("p");
@@ -109,7 +97,7 @@
     } else {
       const soon = document.createElement("p");
       soon.className = "show-soon";
-      soon.textContent = "Audio coming soon";
+      soon.textContent = "האודיו יעלה בקרוב";
       body.appendChild(soon);
     }
 
